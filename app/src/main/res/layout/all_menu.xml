@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_above="@+id/checkout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_height="85dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="6dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_shopping_cart_black_24dp" />
+
+        <TextView
+            android:id="@+id/items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+
+            android:background="@drawable/circle_outline"
+            android:textStyle="bold"
+
+            android:fontFamily="sans-serif"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/cart"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text=" 6 "
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+
+            android:textSize="10sp" />
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/crafs"
+                android:textAllCaps="true"
+                android:textColor="#f2f2f2"
+                android:textSize="16sp" />
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f5f5f5"
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cartList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
+
+
+
+</RelativeLayout>

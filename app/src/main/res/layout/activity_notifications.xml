@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:layout_height="115dp"
+        android:id="@+id/header"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent">
+
+
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="6dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_shopping_cart_black_24dp" />
+
+        <TextView
+            android:id="@+id/items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_outline"
+            android:fontFamily="sans-serif"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/cart"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textStyle="bold"
+            android:text=" 6 "
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+
+            android:textSize="10sp" />
+
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/crafs"
+                android:textAllCaps="true"
+                android:textColor="#f2f2f2"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="Search using Dish Name 'Veg Biriyani'"
+                    android:textSize="13sp"
+                    android:textColor="#444"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_toStartOf="@+id/cross"
+                    android:background="@drawable/edit_text"
+                    android:padding="8dp" />
+
+                <ImageView
+                    android:id="@+id/cross"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_search_black_24dp" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/scroll"
+        android:layout_below="@+id/header"
+        android:layout_alignParentTop="@+id/navigation"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f5f5f5"
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/advertise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/top_restro"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Top Handpicked Restaurants   "
+                        android:textAllCaps="true"
+                        android:textColor="#ec9201"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/restroList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#fff"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/top_restro"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+
+                        <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/dish" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="0dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Top Dishes   "
+
+                                android:textAllCaps="true"
+                                android:textColor="#ec9201"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:layout_marginLeft="10dp"
+
+                                android:fontFamily="sans-serif-light"
+                                android:text="Dishes generally most popular among"
+                                android:textColor="#c97c01"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/dishList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="#fff"
+
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:id="@+id/restroList"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navigation"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation"
+        />
+
+</RelativeLayout>
